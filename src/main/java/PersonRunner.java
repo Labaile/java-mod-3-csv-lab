@@ -6,13 +6,22 @@ import java.util.Scanner;
 public class PersonRunner {
 
     public static void main(String[] args) throws IOException {
-//        Person testPerson = new Person("Sherita", "Taylor", 1990, 12, 19);
+       // So we can initialize an instance of Person and print its value to the console with the following code:
+       Person testPerson = new Person("Sherita", "Taylor", 1990, 12, 19);
 //        System.out.println(testPerson);
-//        String personCSV = testPerson.formatAsCSV();
-//        writeToFile("person.csv", personCSV);
+//
+//        //creates a string object and writes it, to a csv file
+     System.out.println("This is when we write to file");
+      String personCSV = testPerson.formatAsCSV();
+      writeToFile("person.csv", personCSV);
 
-        String personCSV = readFromFile("person.csv", false);
-        Person testPerson = new Person(personCSV);
+
+        //create a string object and read from csv file
+        String readFromFilePersonCSV = readFromFile("person.csv", false);
+        Person readFromFileTestPerson = new Person(readFromFilePersonCSV);
+        System.out.println("This was read from a csv file:\n" + readFromFileTestPerson);
+        //String getLastName = readFromFileTestPerson.getLastName();
+        //System.out.println(getLastName);
 
     }
 

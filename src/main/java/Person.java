@@ -16,14 +16,18 @@ public class Person {
         System.out.println(this);
     }
 
-//    public Person(String firstName, String lastName, int birthYear, int birthMonth, int birthDay) {
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.birthYear = birthYear;
-//        this.birthMonth = birthMonth;
-//        this.birthDay = birthDay;
-//    }
+    //a custom constructor that allows us to pass all the values to initialize an instance
+    public Person(String firstName, String lastName, int birthYear, int birthMonth, int birthDay) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthYear = birthYear;
+        this.birthMonth = birthMonth;
+        this.birthDay = birthDay;
+    }
 
+
+    // A toString() method that returns a String representation of the values of the object. The toString() method is
+    // called by default when a non-string object is passed to the System.out.println() method
     public String toString() {
         StringBuffer personString = new StringBuffer();
         personString.append("firstName = " + firstName);
